@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wimmer Taxi - Startseite</title>
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    :root{--brand:#0d6efd;--muted:#e9f2ff}
+    body{font-family:system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;}
+    .hero{background:linear-gradient(180deg,var(--muted),#ffffff);padding:5rem 0}
+    .brand{color:var(--brand)}
+    .card-service{border:0;border-radius:0.75rem}
+    .contact-bar{background:var(--brand);color:#fff;padding:1rem;border-radius:0.5rem}
+    footer{font-size:.9rem;padding:2rem 0;color:#666}
+    .hero-image{max-height:220px;filter:drop-shadow(0 4px 12px rgba(13,110,253,.12))}
+    .max-width-form{max-width:720px}
+    .service-card{transition:transform .18s ease,box-shadow .18s ease}
+    .service-card:hover{transform:translateY(-6px);box-shadow:0 10px 30px rgba(13,110,253,.08)}
+    .service-icon{width:48px;height:48px;display:flex;align-items:center;justify-content:center}
+    .contact-bar{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem}
+    .btn-primary{box-shadow:0 6px 18px rgba(13,110,253,.08)}
+  </style>
+</head>
+<body>
+
+  <!-- Navbar placeholder (keeps your server-side navbar file) -->
+  <div id="navbar-placeholder"></div>
+
+  <!-- Hero -->
+  <header class="hero">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-7">
+          <h1 class="display-5 fw-bold brand">KFZ Taxi Wimmer</h1>
+          <p class="lead text-muted">Schnell. Sicher. Zuverlässig in Regensburg und Umgebung.</p>
+          <p>Wir bringen Sie pünktlich zum Ziel — privat, geschäftlich oder zum Flughafen. Buchen Sie einfach per Telefon oder Formular.</p>
+          <div class="d-flex gap-2 mt-3">
+            <a href="#services" class="btn btn-primary btn-lg">Unsere Leistungen</a>
+            <a href="content/Kontakt.html" class="btn btn-outline-primary btn-lg">Kontakt</a>
+          </div>
+        </div>
+        <div class="col-md-5 text-center mt-4 mt-md-0">
+          <img src="img/taxi.png" alt="Taxi" class="img-fluid hero-image">
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Services -->
+  <section id="services" class="py-5">
+    <div class="container">
+      <h2 class="h3 mb-4">Unsere Leistungen</h2>
+      <div class="row g-3">
+        <div class="col-md-4">
+          <div class="card card-service p-3 shadow-sm service-card">
+            <div class="card-body d-flex gap-3 align-items-start">
+              <div class="service-icon" aria-hidden>
+                <!-- location icon -->
+                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 11 7 11s7-5.75 7-11c0-3.87-3.13-7-7-7z" stroke="#0d6efd" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <div>
+                <h5 class="card-title">Stadtfahrten</h5>
+                <p class="card-text text-muted mb-0">Kurzstrecken in Regensburg — schnell, sicher und transparent bepreist.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card card-service p-3 shadow-sm service-card">
+            <div class="card-body d-flex gap-3 align-items-start">
+              <div class="service-icon">
+                <!-- briefcase icon -->
+                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 7h18v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7z" stroke="#0d6efd" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 7V6a4 4 0 0 1 8 0v1" stroke="#0d6efd" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <div>
+                <h5 class="card-title">Firmen & Shuttle</h5>
+                <p class="card-text text-muted mb-0">Zuverlässige Fahrten für Geschäftskunden, regelmäßige Shuttle-Strecken und Gruppenbuchungen.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card card-service p-3 shadow-sm service-card">
+            <div class="card-body d-flex gap-3 align-items-start">
+              <div class="service-icon">
+                <!-- clock/package icon -->
+                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21 16V8a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v8" stroke="#0d6efd" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M7 20h10" stroke="#0d6efd" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 11v5" stroke="#0d6efd" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <div>
+                <h5 class="card-title">Spezialfahrten</h5>
+                <p class="card-text text-muted mb-0">Kurierfahrten, Abend- und Veranstaltungstransfers — flexibel und diskret.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact CTA -->
+  <section class="py-4">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-8">
+          <div class="contact-bar">
+            <strong>Jetzt anrufen:</strong> <span class="fw-bold">+49 941 123456</span>
+            <span class="d-block d-md-inline-block ms-3">Oder schreiben Sie uns über das Kontaktformular.</span>
+          </div>
+        </div>
+        <div class="col-md-4 text-md-end mt-3 mt-md-0">
+          <a href="content/Kontakt.html" class="btn btn-light btn-lg">Zur Kontaktseite</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kontakt -->
+  <section id="kontakt" class="py-5 bg-light">
+    <div class="container">
+      <h3 class="h5 mb-3">Kontakt</h3>
+      <div class="row">
+        <div class="col-md-6">
+          <p class="mb-1"><strong>Telefon:</strong> <a href="tel:+49941123456">+49 941 123456</a></p>
+          <p class="mb-1"><strong>E-Mail:</strong> <a href="mailto:info@wimmer-taxi.de">info@wimmer-taxi.de</a></p>
+          <p class="text-muted small">Für Anfragen rufen Sie bitte an oder schreiben Sie uns per E‑Mail. Weitere Details gibt es auf der Kontaktseite.</p>
+        </div>
+        <div class="col-md-6">
+          <p class="mb-1"><strong>Adresse:</strong></p>
+          <p>Beispielstraße 1<br>93047 Regensburg</p>
+          <p><a class="btn btn-outline-primary" href="content/Kontakt.html">Mehr Kontaktinfos</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="text-center">
+    <div class="container">
+      <p class="mb-1">© 2025 Wimmer Taxi — Regensburg</p>
+      <p class="text-muted small">Alle Angaben ohne Gewähr. Gestaltung inspiriert, Text angepasst.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Load external navbar file into placeholder (keeps existing site structure)
+    fetch('content/navbar.html')
+      .then(res => res.text())
+      .then(html => document.getElementById('navbar-placeholder').innerHTML = html)
+      .catch(()=>{
+        // fallback simple navbar if fetch fails
+        document.getElementById('navbar-placeholder').innerHTML = '<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm"><div class="container"><a class="navbar-brand brand" href="#">Wimmer Taxi</a></div></nav>'
+      });
+  </script>
+
+</body>
+</html>
