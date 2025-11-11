@@ -1,38 +1,54 @@
-<!DOCTYPE html>
-<html lang="de">
+<!-- Shared navbar fragment -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top shadow-lg" aria-label="Hauptnavigation">
+    <div class="container position-relative">
+        <a class="navbar-brand d-flex align-items-center position-absolute start-0" href="/">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-taxi-front me-2 brand-icon" viewBox="0 0 16 16">
+                <path d="M13.198 8a.5.5 0 0 1 .487.574l-.343 3.086a1.5 1.5 0 0 1-1.49 1.34H4.148a1.5 1.5 0 0 1-1.49-1.34L2.315 8.574A.5.5 0 0 1 2.802 8h10.396ZM2 7a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v1H2V7Zm11 3.5a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1 0-1h1a.5.5 0 0 1 .5.5Zm-10 0a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1 0-1h1a.5.5 0 0 1 .5.5ZM6 9.5a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1 0-1h1a.5.5 0 0 1 .5.5Zm4 0a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1 0-1h1a.5.5 0 0 1 .5.5ZM4.5 5a2.5 2.5 0 0 1 5 0h-5Zm4 0a1.5 1.5 0 1 1 3 0h-3Z"/>
+            </svg>
+            <span class="brand-text">KFZ Taxi Wimmer</span>
+        </a>
+        
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" 
+                data-bs-target="#navbarContent" aria-controls="navbarContent" 
+                aria-expanded="false" aria-label="Navigation umschalten">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-
-<body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <div class="container-fluid justify-content-center">
-      <a class="navbar-brand" href="#">KFZ Taxi Wimmer</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Navigation umschalten">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
-        <ul class="navbar-nav mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link" href="/index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/content/KFZ.html">KFZ Werkstatt</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/content/taxi.html">Taxi</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/content/Kontakt.html">Kontakt</a>
-          </li>
-        </ul>
-      </div>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarContent">
+            <ul class="navbar-nav py-3 py-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link px-3" href="/" data-navlink>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-house me-1" viewBox="0 0 16 16">
+                            <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5ZM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5 5 5Z"/>
+                        </svg>
+                        Home
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link px-3" href="/content/KFZ.html" data-navlink>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-tools me-1" viewBox="0 0 16 16">
+                            <path d="M1 0 0 1l2.2 3.081a1 1 0 0 0 .815.419h.07a1 1 0 0 1 .708.293l2.675 2.675-2.617 2.654A3.003 3.003 0 0 0 0 13a3 3 0 1 0 5.878-.851l2.654-2.617.968.968-.305.914a1 1 0 0 0 .242 1.023l3.27 3.27a.997.997 0 0 0 1.414 0l1.586-1.586a.997.997 0 0 0 0-1.414l-3.27-3.27a1 1 0 0 0-1.023-.242L10.5 9.5l-.96-.96 2.68-2.643A3.005 3.005 0 0 0 16 3c0-.269-.035-.53-.102-.777l-2.14 2.141L12 4l-.364-1.757L13.777.102a3 3 0 0 0-3.675 3.68L7.462 6.46 4.793 3.793a1 1 0 0 1-.293-.707v-.071a1 1 0 0 0-.419-.814L1 0Zm9.646 10.646a.5.5 0 0 1 .708 0l2.914 2.915a.5.5 0 0 1-.707.707l-2.915-2.914a.5.5 0 0 1 0-.708ZM3 11l.471.242.529.026.287.445.445.287.026.529L5 13l-.242.471-.026.529-.445.287-.287.445-.529.026L3 15l-.471-.242L2 14.732l-.287-.445L1.268 14l-.026-.529L1 13l.242-.471.026-.529.445-.287.287-.445.529-.026L3 11Z"/>
+                        </svg>
+                        KFZ Werkstatt
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link px-3" href="/content/taxi.html" data-navlink>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-taxi-front me-1" viewBox="0 0 16 16">
+                            <path d="M13.198 8a.5.5 0 0 1 .487.574l-.343 3.086a1.5 1.5 0 0 1-1.49 1.34H4.148a1.5 1.5 0 0 1-1.49-1.34L2.315 8.574A.5.5 0 0 1 2.802 8h10.396ZM2 7a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v1H2V7Zm11 3.5a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1 0-1h1a.5.5 0 0 1 .5.5Zm-10 0a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1 0-1h1a.5.5 0 0 1 .5.5ZM6 9.5a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1 0-1h1a.5.5 0 0 1 .5.5Zm4 0a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1 0-1h1a.5.5 0 0 1 .5.5ZM4.5 5a2.5 2.5 0 0 1 5 0h-5Zm4 0a1.5 1.5 0 1 1 3 0h-3Z"/>
+                        </svg>
+                        Taxi
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link px-3" href="/content/Kontakt.html" data-navlink>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-envelope me-1" viewBox="0 0 16 16">
+                            <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+                        </svg>
+                        Kontakt
+                    </a>
+                </li>
+            </ul>
+        </div>
     </div>
-  </nav>
-</body>
-
-</html>
+</nav>

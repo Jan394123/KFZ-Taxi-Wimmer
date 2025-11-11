@@ -1,6 +1,177 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Taxi Service - KFZ Wimmer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+  </head>
+  <body>
+    <div id="navbar-placeholder"></div>
+
+    <!-- Hero Section -->
+  <header class="hero position-relative text-white d-flex align-items-center py-5" style="min-height: 60vh; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../img/taxi-hero.jpg') no-repeat center center; background-size: cover;">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8">
+          <h1 class="display-4 fw-bold mb-4">Ihr zuverlässiger Taxi-Service</h1>
+          <p class="lead mb-4">Sicher, komfortabel und pünktlich ans Ziel - zu jeder Tages- und Nachtzeit.</p>
+          <div class="d-flex gap-3">
+            <a href="tel:+4301234567890" class="btn btn-primary btn-lg">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone me-2" viewBox="0 0 16 16">
+                <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+              </svg>
+              Jetzt anrufen
+            </a>
+            <a href="#preise" class="btn btn-outline-light btn-lg">Preise ansehen</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Services Section -->
+  <section class="section py-5">
+    <div class="container">
+      <h2 class="section-title text-center mb-5">Unsere Taxi-Services</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <div class="text-primary mb-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-car-front" viewBox="0 0 16 16">
+                  <path d="M4 9a1 1 0 1 1-2 0 1 1 0 0 1 2 0Zm10 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0ZM6 8a1 1 0 0 0 0 2h4a1 1 0 1 0 0-2H6ZM4.862 4.276 3.906 6.19a.51.51 0 0 0 .497.731c.91-.073 2.35-.17 3.597-.17 1.247 0 2.688.097 3.597.17a.51.51 0 0 0 .497-.731l-.956-1.913A.5.5 0 0 0 10.691 4H5.309a.5.5 0 0 0-.447.276Z"/>
+                  <path d="M2.52 3.515A2.5 2.5 0 0 1 4.82 2h6.362c1 0 1.904.596 2.298 1.515l.792 1.848c.075.175.21.319.38.404.5.25.855.715.965 1.262l.335 1.679c.033.161.049.325.049.49v.413c0 .814-.39 1.543-1 1.997V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.338c-1.292.048-2.745.088-4 .088s-2.708-.04-4-.088V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.892c-.61-.454-1-1.183-1-1.997v-.413a2.5 2.5 0 0 1 .049-.49l.335-1.68c.11-.546.465-1.012.964-1.261a.807.807 0 0 0 .381-.404l.792-1.848Z"/>
+                </svg>
+              </div>
+              <h3 class="h5 card-title">Personen-Transport</h3>
+              <p class="card-text">Zuverlässige und komfortable Beförderung für Einzelpersonen und Gruppen.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <div class="text-primary mb-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-briefcase" viewBox="0 0 16 16">
+                  <path d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v8A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-8A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5zm1.886 6.914L15 7.151V12.5a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5V7.15l6.614 1.764a1.5 1.5 0 0 0 .772 0zM1.5 4h13a.5.5 0 0 1 .5.5v1.616L8.129 7.948a.5.5 0 0 1-.258 0L1 6.116V4.5a.5.5 0 0 1 .5-.5z"/>
+                </svg>
+              </div>
+              <h3 class="h5 card-title">Business Service</h3>
+              <p class="card-text">Professioneller Service für Geschäftskunden und Flughafentransfers.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <div class="text-primary mb-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-calendar-event" viewBox="0 0 16 16">
+                  <path d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1z"/>
+                  <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+                </svg>
+              </div>
+              <h3 class="h5 card-title">Event Service</h3>
+              <p class="card-text">Zuverlässiger Transport für private Feiern und Veranstaltungen.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section id="preise" class="section py-5 bg-light">
+    <div class="container">
+      <h2 class="section-title text-center mb-5">Unsere Preise</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h3 class="h5 card-title mb-4">Stadtfahrten</h3>
+              <div class="pricing-details mb-4">
+                <div class="d-flex justify-content-between mb-2">
+                  <span>Grundgebühr</span>
+                  <span class="fw-bold">€ 4,00</span>
+                </div>
+                <div class="d-flex justify-content-between mb-2">
+                  <span>Pro Kilometer</span>
+                  <span class="fw-bold">€ 2,00</span>
+                </div>
+                <div class="d-flex justify-content-between mb-2">
+                  <span>Wartezeit (pro Stunde)</span>
+                  <span class="fw-bold">€ 40,00</span>
+                </div>
+              </div>
+              <a href="tel:+4301234567890" class="btn btn-primary w-100">Jetzt buchen</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h3 class="h5 card-title mb-4">Flughafentransfer</h3>
+              <div class="pricing-details mb-4">
+                <div class="d-flex justify-content-between mb-2">
+                  <span>Flughafen Wien</span>
+                  <span class="fw-bold">€ 45,00</span>
+                </div>
+                <div class="d-flex justify-content-between mb-2">
+                  <span>Flughafen Salzburg</span>
+                  <span class="fw-bold">€ 35,00</span>
+                </div>
+                <div class="d-flex justify-content-between mb-2">
+                  <span>Gepäck pro Stück</span>
+                  <span class="fw-bold">kostenlos</span>
+                </div>
+              </div>
+              <a href="tel:+4301234567890" class="btn btn-primary w-100">Jetzt buchen</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h3 class="h5 card-title mb-4">Event Service</h3>
+              <div class="pricing-details mb-4">
+                <div class="d-flex justify-content-between mb-2">
+                  <span>Stundenpreis</span>
+                  <span class="fw-bold">€ 55,00</span>
+                </div>
+                <div class="d-flex justify-content-between mb-2">
+                  <span>Mindestbuchung</span>
+                  <span class="fw-bold">3 Stunden</span>
+                </div>
+                <div class="d-flex justify-content-between mb-2">
+                  <span>Nachtzuschlag</span>
+                  <span class="fw-bold">€ 10,00</span>
+                </div>
+              </div>
+              <a href="tel:+4301234567890" class="btn btn-primary w-100">Jetzt buchen</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mt-5">
+        <p class="text-center text-muted small">
+          * Alle Preise inkl. MwSt. Sonderkonditionen für Stammkunden und Geschäftskunden auf Anfrage.
+          <br>Nachtzuschlag von 22:00 - 06:00 Uhr.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+    
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="../js/main.js"></script>
+  </body>
+  </html>
+<!DOCTYPE html>
+<html lang="de">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Taxi</title>
@@ -17,5 +188,18 @@
     .then(res => res.text())
     .then(data => document.getElementById('navbar-placeholder').innerHTML = data);
 </script>
+  
+  <!-- Footer laden (shared fragment) -->
+  <div id="footer-placeholder"></div>
+  <script>
+    fetch('footer.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('footer-placeholder').innerHTML = html;
+        const el = document.getElementById('footer-year');
+        if (el) el.textContent = new Date().getFullYear();
+      })
+      .catch(err => console.warn('Footer konnte nicht geladen werden:', err));
+  </script>
 </body>
 </html>
