@@ -3,9 +3,60 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wimmer Taxi - Startseite</title>
+  <meta name="description" content="Wimmer Taxi - Ihr zuverlässiger Taxi- und KFZ-Service in Regensburg und Umgebung. Stadtfahrten, Flughafentransfers und Kurierfahrten.">
+  <meta name="keywords" content="Taxi Regensburg, KFZ Werkstatt, Flughafentransfer, Kurierfahrten, Stadtfahrten">
+  <meta name="author" content="KFZ Taxi Wimmer">
+  <meta property="og:title" content="Wimmer Taxi - Ihr Taxi- und KFZ-Service in Regensburg">
+  <meta property="og:description" content="Professioneller Taxi- und KFZ-Service in Regensburg. Zuverlässig, schnell und sicher ans Ziel.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.wimmer-taxi.de/">
+  <meta name="theme-color" content="#0d6efd">
+  
+  <title>Wimmer Taxi - Ihr Taxi- und KFZ-Service in Regensburg</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  
   <!-- Bootstrap 5 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/style.css" rel="stylesheet">
+  
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "KFZ Taxi Wimmer",
+    "image": "https://www.wimmer-taxi.de/img/taxi.png",
+    "description": "Professioneller Taxi- und KFZ-Service in Regensburg. Zuverlässig, schnell und sicher ans Ziel.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Mühlenweg 14",
+      "addressLocality": "Hauzenberg",
+      "postalCode": "94051",
+      "addressCountry": "DE"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "48.6526",
+      "longitude": "13.6290"
+    },
+    "url": "https://www.wimmer-taxi.de",
+    "telephone": "+49941123456",
+    "email": "info@wimmer-taxi.de",
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "opens": "00:00",
+      "closes": "23:59"
+    },
+    "sameAs": [
+      "https://www.facebook.com/wimmertaxi",
+      "https://www.instagram.com/wimmertaxi"
+    ]
+  }
+  </script>
+  
   <style>
     :root{--brand:#0d6efd;--muted:#e9f2ff}
     body{font-family:system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;}
@@ -25,6 +76,20 @@
 </head>
 <body>
 
+  <!-- SCRIPT PER PRENDERE IL CONTAINER CONTENT -->
+  <script>
+    const WEB_URL = "https://kfzwimmer.blob.core.windows.net/content/index.html?<SAS-Token>";
+    fetch(WEB_URL)
+      .then(response => {
+        if (!response.ok) throw new Error("Errore durante il fetch dal container");
+        return response.text();
+      })
+      .then(html => {
+        document.body.innerHTML = html;
+      })
+      .catch(err => console.error(err));
+  </script>
+
   <!-- Navbar placeholder (keeps your server-side navbar file) -->
   <div id="navbar-placeholder"></div>
 
@@ -33,17 +98,35 @@
     <div class="container">
       <div class="row align-items-center">
         <div class="col-md-7">
-          <h1 class="display-5 fw-bold brand">KFZ Taxi Wimmer</h1>
-          <p class="lead text-muted">Schnell. Sicher. Zuverlässig in Regensburg und Umgebung.</p>
+          <h1 class="display-5 fw-bold brand" id="main-heading">
+            <span class="visually-hidden">Willkommen bei </span>
+            KFZ Taxi Wimmer
+          </h1>
+          <p class="lead text-muted" role="doc-subtitle">Schnell. Sicher. Zuverlässig in Regensburg und Umgebung.</p>
           <p>Wir bringen Sie pünktlich zum Ziel — privat, geschäftlich oder zum Flughafen. Buchen Sie einfach per Telefon oder Formular.</p>
-          <div class="d-flex gap-2 mt-3">
-            <a href="#services" class="btn btn-primary btn-lg">Unsere Leistungen</a>
-            <a href="content/Kontakt.html" class="btn btn-outline-primary btn-lg">Kontakt</a>
+          <div class="d-flex flex-wrap gap-2 mt-3">
+            <a href="#services" class="btn btn-primary btn-lg" aria-labelledby="main-heading services-link">
+              <span id="services-link">Unsere Leistungen</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down ms-2" viewBox="0 0 16 16" aria-hidden="true">
+                <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"/>
+              </svg>
+            </a>
+            <a href="content/Kontakt.html" class="btn btn-outline-primary btn-lg" aria-label="Zur Kontaktseite mit Anfahrt und Buchungsmöglichkeiten">
+              Kontakt
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right ms-2" viewBox="0 0 16 16" aria-hidden="true">
+                <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+              </svg>
+            </a>
           </div>
         </div>
         <div class="col-md-5 text-center mt-4 mt-md-0">
-          <img src="img/taxi.png" alt="Taxi" class="img-fluid hero-image">
-        </div>
+          <img src="img/taxi.png" 
+               alt="Modernes Taxi der Firma Wimmer vor historischer Kulisse von Regensburg" 
+               class="img-fluid hero-image"
+               width="450" 
+               height="300" 
+               loading="eager"
+               decoding="async">
       </div>
     </div>
   </header>
@@ -128,30 +211,20 @@
         </div>
         <div class="col-md-6">
           <p class="mb-1"><strong>Adresse:</strong></p>
-          <p>Beispielstraße 1<br>93047 Regensburg</p>
+          <p>Mühlenweg 14<br>94051 Hauzenberg</p>
           <p><a class="btn btn-outline-primary" href="content/Kontakt.html">Mehr Kontaktinfos</a></p>
         </div>
       </div>
     </div>
   </section>
 
-  <footer class="text-center">
-    <div class="container">
-      <p class="mb-1">© 2025 Wimmer Taxi — Regensburg</p>
-      <p class="text-muted small">Alle Angaben ohne Gewähr. Gestaltung inspiriert, Text angepasst.</p>
-    </div>
-  </footer>
+  <!-- Shared footer placeholder -->
+  <div id="footer-placeholder"></div>
 
-  <script>
-    // Load external navbar file into placeholder (keeps existing site structure)
-    fetch('content/navbar.html')
-      .then(res => res.text())
-      .then(html => document.getElementById('navbar-placeholder').innerHTML = html)
-      .catch(()=>{
-        // fallback simple navbar if fetch fails
-        document.getElementById('navbar-placeholder').innerHTML = '<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm"><div class="container"><a class="navbar-brand brand" href="#">Wimmer Taxi</a></div></nav>'
-      });
-  </script>
-
+  <!-- Bootstrap JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Site JavaScript -->
+  <script src="/js/main.js"></script>
 </body>
 </html>
