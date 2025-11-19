@@ -14,17 +14,9 @@
 
   <!-- Hero Section -->
   <header class="bg-primary text-white py-5">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-lg-6">
-          <h1 class="display-4 fw-bold mb-4">Ihre Experten für KFZ-Service</h1>
-          <p class="lead mb-4">Professionelle Wartung und Reparatur für alle Fahrzeugmarken. Vertrauen Sie auf über 20 Jahre Erfahrung.</p>
-          <a href="#kontakt" class="btn btn-light btn-lg">Termin vereinbaren</a>
-        </div>
-        <div class="col-lg-6">
-          <img src="/img/werkstatt.jpg" alt="KFZ Werkstatt Wimmer" class="img-fluid rounded-3 shadow-lg">
-        </div>
-      </div>
+    <div class="container text-center">
+      <h1 class="display-4 fw-bold mb-4">Ihre Experten für KFZ-Service</h1>
+      <p class="lead mb-4">Professionelle Wartung und Reparatur für alle Fahrzeugmarken.</p>
     </div>
   </header>
 
@@ -92,7 +84,7 @@
             </div>
             <div>
               <p class="mb-0"><strong>Telefon</strong></p>
-              <p class="mb-0"><a href="tel:+4301234567890" class="text-decoration-none">+43 0123 4567890</a></p>
+              <p class="mb-0"><a href="tel:+49151211604089" class="text-decoration-none">+49 1512 1160489</a></p>
             </div>
           </div>
           <div class="d-flex align-items-center mb-3">
@@ -103,7 +95,7 @@
             </div>
             <div>
               <p class="mb-0"><strong>E-Mail</strong></p>
-              <p class="mb-0"><a href="mailto:service@kfz-wimmer.at" class="text-decoration-none">service@kfz-wimmer.at</a></p>
+              <p class="mb-0"><a href="mailto:fw28321@googlemail.com" class="text-decoration-none">fw28321@googlemail.com</a></p>
             </div>
           </div>
           <div class="d-flex align-items-center">
@@ -115,31 +107,15 @@
             </div>
             <div>
               <p class="mb-0"><strong>Adresse</strong></p>
-              <p class="mb-0">Mustergasse 123<br>1234 Musterstadt</p>
+              <p class="mb-0">Mühlenweg 14<br>94051 Hauzenberg</p>
             </div>
           </div>
         </div>
-        <div class="col-md-6 mt-4 mt-md-0">
-          <div class="card shadow-sm">
-            <div class="card-body p-4">
-              <h3 class="h5 mb-4">Termin vereinbaren</h3>
-              <form>
-                <div class="mb-3">
-                  <input type="text" class="form-control" placeholder="Name" required>
-                </div>
-                <div class="mb-3">
-                  <input type="email" class="form-control" placeholder="E-Mail" required>
-                </div>
-                <div class="mb-3">
-                  <input type="tel" class="form-control" placeholder="Telefon" required>
-                </div>
-                <div class="mb-3">
-                  <textarea class="form-control" rows="4" placeholder="Ihre Nachricht" required></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary w-100">Nachricht senden</button>
-              </form>
-            </div>
-          </div>
+        <div class="col-md-6 mt-4 mt-md-0 text-center">
+          <h3 class="h5 mb-4">Schnell per WhatsApp</h3>
+          <button id="wa-workshop" class="wa-btn wa-workshop" type="button" aria-label="Werkstatt per WhatsApp kontaktieren">
+            🛠️ Werkstatt per WhatsApp
+          </button>
         </div>
       </div>
     </div>
@@ -159,7 +135,7 @@
                 <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"/>
               </svg>
             </div>
-            <h3 class="h5">20+ Jahre Erfahrung</h3>
+            <h3 class="h5">10+ Jahre Erfahrung</h3>
             <p class="text-muted">Langjährige Expertise in der KFZ-Branche</p>
           </div>
         </div>
@@ -204,23 +180,9 @@
 <!-- ... -->
 <div id="navbar-placeholder"></div>
 <!-- ... -->
-<script>
-  fetch('navbar.html')
-    .then(res => res.text())
-    .then(data => document.getElementById('navbar-placeholder').innerHTML = data);
-</script>
-  
+
   <!-- Footer laden (shared fragment) -->
   <div id="footer-placeholder"></div>
-  <script>
-    fetch('footer.html')
-      .then(res => res.text())
-      .then(html => {
-        document.getElementById('footer-placeholder').innerHTML = html;
-        const el = document.getElementById('footer-year');
-        if (el) el.textContent = new Date().getFullYear();
-      })
-      .catch(err => console.warn('Footer konnte nicht geladen werden:', err));
-  </script>
+  <script src="/js/main.js"></script>
 </body>
 </html>

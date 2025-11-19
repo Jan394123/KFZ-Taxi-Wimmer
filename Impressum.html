@@ -6,20 +6,13 @@
 	<title>Impressum — Wimmer Taxi</title>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 	<link href="/style.css" rel="stylesheet">
-	<style>
-		:root{--muted:#6c757d}
-		body{font-family:system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;}
-		.hero-impressum{background:linear-gradient(180deg,#f8f9fa,#ffffff);padding:3.5rem 0;border-bottom:1px solid #eef2f6}
-		.card-contact{border-radius:.75rem}
-		.meta small{color:var(--muted)}
-	</style>
 	<script type="application/ld+json">
 	{
 		"@context": "https://schema.org",
 		"@type": "LocalBusiness",
 		"name": "KFZ Taxi Wimmer",
 		"address": { "@type": "PostalAddress", "streetAddress": "Mühlenweg 14", "postalCode": "94051", "addressLocality": "Hauzenberg", "addressCountry": "DE" },
-		"telephone": "+49941123456",
+		"telephone": "+4915121160489",
 		"email": "info@wimmer-taxi.de",
 		"url": "https://example.org/"
 	}
@@ -34,13 +27,11 @@
 	<header class="hero-impressum">
 		<div class="container">
 			<div class="row align-items-center">
-				<div class="col-md-8">
+				<div class="col-12">
 					<h1 class="display-6 mb-1">Impressum</h1>
 					<p class="meta mb-0"><small>Rechtliche Angaben und Kontakt — KFZ Taxi Wimmer</small></p>
 				</div>
-				<div class="col-md-4 text-md-end mt-3 mt-md-0">
-					<a href="/" class="btn btn-outline-primary">Zur Startseite</a>
-				</div>
+
 			</div>
 		</div>
 	</header>
@@ -51,8 +42,8 @@
 					<section class="mb-4">
 						<h2 class="h5">Angaben gemäß § 5 TMG</h2>
 						<p><strong>KFZ Taxi Wimmer</strong><br>Mühlenweg 14<br>94051 Hauzenberg</p>
-						<p>Vertreten durch: Max Wimmer</p>
-						<p>Telefon: <a href="tel:+49941123456">+49 941 123456</a><br>E‑Mail: <a href="mailto:info@wimmer-taxi.de">info@wimmer-taxi.de</a></p>
+						<p>Vertreten durch: Fritz Wimmer</p>
+						<p>Telefon: <a href="tel:+4915121160489">+49 1512 1160489</a><br>E‑Mail: <a href="mailto:fw28321@googlemail.com">fw28321@googlemail.com</a></p>
 					</section>
 
 					<section class="mb-4">
@@ -68,26 +59,10 @@
 			</div>
 		</main>
 
-	<!-- Footer placeholder -->
-	<div id="footer-placeholder"></div>
+		<!-- Footer placeholder -->
+		<div id="footer-placeholder"></div>
 
-	<script>
-		// load navbar fragment
-		fetch('navbar.html')
-			.then(r => r.text())
-			.then(html => document.getElementById('navbar-placeholder').innerHTML = html)
-			.catch(()=>{});
-
-		// load footer fragment and set year
-		fetch('footer.html')
-			.then(r => r.text())
-			.then(html => {
-				document.getElementById('footer-placeholder').innerHTML = html;
-				const el = document.getElementById('footer-year'); if (el) el.textContent = new Date().getFullYear();
-			})
-			.catch(()=>{});
-	</script>
-
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+		<script src="/js/main.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
