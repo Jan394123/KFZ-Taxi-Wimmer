@@ -1,3 +1,25 @@
+/* Portrait-Bild im Karussell gezielt zuschneiden */
+/* Einheitliche Höhe für Karussell und Slides */
+.hero-slideshow .carousel,
+.hero-slideshow .carousel-inner,
+.slide-bg {
+  height: 420px;
+  min-height: 320px;
+  max-height: 100vh;
+}
+
+.slide-bg,
+.slide-bg-portrait {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+#preisliste-extracted .price-updated { background: rgba(40,167,69,0.05); }
+.price-updated { font-weight: 700; color: var(--primary); }
+.undo-price { margin-left: 8px; font-size: 0.85rem; }
 :root {
     /* Vereinfachte Variablen für Schulniveau */
     --primary: #0d6efd;
@@ -50,6 +72,102 @@ footer[role="contentinfo"] { padding: 16px 0; background: var(--primary); color:
 .gap { gap: var(--gap); }
 
 /* Contact Page Components */
+/* Enhanced Fare Calculator Styles */
+#fare-calculator {
+  border: none;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+#fare-calculator .card-header {
+  background: linear-gradient(135deg, var(--primary) 0%, #0a58ca 100%);
+  border: none;
+  padding: 1.5rem;
+}
+
+#fare-calculator .form-label {
+  font-weight: 600;
+  color: #495057;
+  margin-bottom: 0.5rem;
+}
+
+#fare-calculator .form-control,
+#fare-calculator .form-select {
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+#fare-calculator .form-control:focus,
+#fare-calculator .form-select:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.15);
+}
+
+#fare-calculator .form-control-lg {
+  padding: 0.75rem 1rem;
+  font-size: 1.1rem;
+}
+
+#fare-calculator .form-select-lg {
+  padding: 0.75rem 1rem;
+  font-size: 1.1rem;
+}
+
+#fare-calculator .form-check-input {
+  width: 1.25em;
+  height: 1.25em;
+  margin-top: 0.125em;
+}
+
+#fare-calculator .form-check-label {
+  margin-left: 0.5rem;
+}
+
+#fare-calculator .btn-lg {
+  padding: 0.75rem 2rem;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+#calc-result-container .alert {
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+#calc-result-container .alert-heading {
+  display: flex;
+  align-items: center;
+}
+
+#calc-output .row > div {
+  padding: 0.25rem 0;
+}
+
+#calc-final {
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Responsive improvements */
+@media (max-width: 768px) {
+  #fare-calculator .card-header {
+    padding: 1rem;
+  }
+  
+  #fare-calculator .card-body {
+    padding: 1.5rem;
+  }
+  
+  #fare-calculator .btn-lg {
+    padding: 0.625rem 1.5rem;
+    font-size: 1rem;
+  }
+}
+
 /* Kontakt-Seite (WhatsApp, Karte) */
 .wa-btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 14px; border-radius: var(--radius); border: none; cursor: pointer; }
 .wa-workshop { background: #25D366; color: white; }
@@ -505,3 +623,563 @@ body.contact-page { background-color: #f8f9fa; }
 
 /* End moved styles */
 
+/* PDF Modal Embed styling */
+.modal .ratio { min-height: 55vh; }
+.btn-outline-primary[disabled], .btn-primary[disabled] { opacity: 0.6; pointer-events: none; }
+
+/* Extracted price list styling */
+#preisliste-extracted { max-width: 1000px; margin: 0 auto; }
+#preisliste-extracted .card-body h5, #preisliste-extracted .card-body h3 { margin-bottom: .5rem; }
+#preisliste-extracted table th { font-weight: 700; }
+#preisliste-extracted table td { vertical-align: middle; }
+
+
+/* Features Section Styles */
+.feature-content {
+  padding: 2rem 0;
+}
+
+.feature-item {
+  padding: 1rem;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.feature-item:hover {
+  background: rgba(13, 110, 253, 0.05);
+  transform: translateX(10px);
+}
+
+.feature-icon {
+  width: 48px;
+  height: 48px;
+  background: rgba(40, 167, 69, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.taxi-illustration {
+  background: linear-gradient(135deg, rgba(13, 110, 253, 0.1) 0%, rgba(10, 88, 202, 0.1) 100%);
+  border-radius: 20px;
+  padding: 3rem;
+  box-shadow: 0 10px 30px rgba(13, 110, 253, 0.1);
+}
+
+.feature-image .badge {
+  border-radius: 25px;
+  font-weight: 600;
+}
+
+/* Hero Section Improvements */
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.4) 100%);
+  z-index: 1;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Card Improvements */
+.card {
+  border: none;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+}
+
+/* Button Improvements */
+.btn {
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary) 0%, #0a58ca 100%);
+  box-shadow: 0 4px 15px rgba(13, 110, 253, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(13, 110, 253, 0.4);
+}
+
+.btn-outline-light {
+  border: 2px solid rgba(255,255,255,0.8);
+  backdrop-filter: blur(10px);
+}
+
+.btn-outline-light:hover {
+  background: rgba(255,255,255,0.2);
+  border-color: white;
+  transform: translateY(-2px);
+}
+
+/* Section Improvements */
+.section {
+  position: relative;
+}
+
+.section-title {
+  font-weight: 700;
+  color: #2c3e50;
+}
+
+/* Pricing Cards Improvements */
+.pricing-details {
+  font-size: 0.95rem;
+}
+
+.pricing-details .fw-bold {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+/* Contact Section Improvements */
+.wa-btn {
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.wa-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.wa-taxi {
+  background: linear-gradient(135deg, #128C7E 0%, #25D366 100%);
+}
+
+/* Responsive Features */
+@media (max-width: 768px) {
+  .feature-content {
+    padding: 1rem 0;
+    text-align: center;
+  }
+  
+  .feature-item:hover {
+    transform: none;
+  }
+  
+  .taxi-illustration {
+    padding: 2rem;
+  }
+  
+  .hero {
+    min-height: 50vh;
+  }
+}
+/* Quick Info Cards */
+.quick-info-card {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(13, 110, 253, 0.1);
+}
+
+.quick-info-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+  border-color: var(--primary);
+}
+
+.quick-info-icon {
+  width: 64px;
+  height: 64px;
+  background: rgba(13, 110, 253, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  transition: all 0.3s ease;
+}
+
+.quick-info-card:hover .quick-info-icon {
+  background: var(--primary);
+  transform: scale(1.1);
+}
+
+.quick-info-card:hover .quick-info-icon svg {
+  color: white !important;
+}
+
+.price-display {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin: 0.5rem 0;
+}
+
+.quick-info-card h4 {
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+/* Responsive Quick Info */
+@media (max-width: 768px) {
+  .quick-info-card {
+    padding: 1.5rem 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .quick-info-icon {
+    width: 56px;
+    height: 56px;
+  }
+  
+  .price-display {
+    font-size: 1.5rem;
+  }
+}
+/* Workshop Slideshow Styles */
+.hero-slideshow {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.carousel-item {
+  height: 100vh;
+  position: relative;
+}
+
+.slide-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.carousel-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.3) 100%);
+  z-index: 1;
+}
+
+.carousel-caption {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  z-index: 2;
+  text-align: center;
+}
+
+.carousel-caption h1 {
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  margin-bottom: 1.5rem;
+}
+
+.carousel-caption p {
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+  font-size: 1.25rem;
+}
+
+.carousel-indicators {
+  bottom: 30px;
+  z-index: 3;
+}
+
+.carousel-indicators button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin: 0 8px;
+  background-color: rgba(255,255,255,0.5);
+  border: 2px solid white;
+  transition: all 0.3s ease;
+}
+
+.carousel-indicators button.active {
+  background-color: white;
+  transform: scale(1.2);
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+  z-index: 3;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 30px;
+  height: 30px;
+  background-size: 100%;
+}
+
+/* Service Cards */
+.service-card {
+  background: white;
+  padding: 2.5rem 2rem;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+  height: 100%;
+  border: 1px solid rgba(13, 110, 253, 0.1);
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+  border-color: var(--primary);
+}
+
+.service-icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, var(--primary) 0%, #0a58ca 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 10px 25px rgba(13, 110, 253, 0.3);
+}
+
+.service-card h3 {
+  color: #2c3e50;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+/* Responsive Slideshow */
+@media (max-width: 768px) {
+  .hero-slideshow {
+    height: 70vh;
+  }
+  
+  .carousel-item {
+    height: 70vh;
+  }
+  
+  .carousel-caption h1 {
+    font-size: 2rem;
+  }
+  
+  .carousel-caption p {
+    font-size: 1rem;
+  }
+  
+  .service-card {
+    padding: 2rem 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .service-icon {
+    width: 70px;
+    height: 70px;
+  }
+}
+/* Workshop Slideshow Height Fix */
+.hero-slideshow {
+  height: 60vh !important;
+}
+
+.carousel-item {
+  height: 60vh !important;
+}
+
+@media (max-width: 768px) {
+  .hero-slideshow {
+    height: 50vh !important;
+  }
+  
+  .carousel-item {
+    height: 50vh !important;
+  }
+}
+
+
+/* Workshop Slideshow - Optimized */
+.hero-slideshow {
+  margin: 2rem auto;
+  max-width: 95%;
+  border-radius: 24px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+}
+
+.carousel-item {
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.slide-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #1a1a1a;
+}
+
+.carousel-item::before {
+  background: linear-gradient(135deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 100%);
+}
+
+.carousel-indicators button {
+  width: 10px;
+  height: 10px;
+  margin: 0 6px;
+  background-color: rgba(255,255,255,0.4);
+  border: 2px solid rgba(255,255,255,0.8);
+  opacity: 0.7;
+}
+
+.carousel-indicators button.active {
+  transform: scale(1.3);
+  opacity: 1;
+  box-shadow: 0 0 10px rgba(255,255,255,0.5);
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 60px;
+  height: 60px;
+  background: rgba(255,255,255,0.15);
+  border-radius: 50%;
+  backdrop-filter: blur(10px);
+  opacity: 0.8;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background: rgba(255,255,255,0.25);
+  opacity: 1;
+}
+
+.carousel-control-prev {
+  left: 20px;
+}
+
+.carousel-control-next {
+  right: 20px;
+}
+
+@media (max-width: 768px) {
+  .hero-slideshow {
+    margin: 1rem auto;
+    border-radius: 16px;
+  }
+  
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .carousel-control-prev {
+    left: 10px;
+  }
+  
+  .carousel-control-next {
+    right: 10px;
+  }
+}
+
+.nav-link.active {
+  background: rgba(255,255,255,0.25) !important;
+  color: white !important;
+  font-weight: 600;
+}
+
+.nav-link.active::after {
+  width: 70% !important;
+}
+
+
+
+.nav-link.active {
+  background: rgba(255,255,255,0.25) !important;
+  color: white !important;
+  font-weight: 700;
+  position: relative;
+  transform: scale(1.05);
+}
+
+.nav-link.active::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, white, transparent);
+  border-radius: 2px;
+  box-shadow: 0 0 10px rgba(255,255,255,0.8);
+}
+
+.service-icon {
+  border-radius: 50% !important;
+}
+
+.service-icon svg {
+  background: linear-gradient(135deg, var(--primary) 0%, #0a58ca 100%);
+  padding: 12px;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+}
+
+
+
+.hero {
+  background: linear-gradient(135deg, var(--primary) 0%, #0a58ca 100%) !important;
+  color: white !important;
+}
+
+.hero h1,
+.hero p,
+.hero .lead {
+  color: white !important;
+}
+
+
+.carousel-item {
+  background: #0d6efd !important;
+}
